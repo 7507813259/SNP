@@ -252,8 +252,7 @@ import {
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Checkbox } from '@/components/ui/checkbox';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { FileUpload } from '../custom-ui/file-upload';
-import PageContainer from '../layout/page-container';
+import PageContainer from '@/components/layout/page-container';
 import { MultiSelect } from '@/components/ui/multi-select';
 
 export type FormFieldConfig = {
@@ -404,16 +403,7 @@ export function ReusableFormSheet<T extends z.ZodObject<any>>({
           typeof fieldConfig.disabled === 'function'
             ? fieldConfig.disabled(watchedFields)
             : fieldConfig.disabled;
-        return (
-          <FileUpload
-            accept={fieldConfig.accept}
-            maxSize={fieldConfig.fileSize || 5 * 1024 * 1024}
-            maxFiles={1}
-            onChange={(files) => field.onChange(files)}
-            multiple={true}
-            disabled={isDisabled}
-          />
-        );
+        return <div></div>;
       }
       // Add this import at the top
 
