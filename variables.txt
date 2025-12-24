@@ -1,0 +1,31 @@
+const PLACEHOLDERS_REFERENCE = {
+  // ✅ Available from VerifiedList (direct fields)
+  '{{FirstName}}': 'User first name (from prospectUserFirstName)',
+  '{{LastName}}': 'User last name (from prospectUserLastName)', 
+  '{{FullName}}': 'User full name (First + Last)',
+  '{{Email}}': 'User email address (from prospectUserEmailAddress)',
+  '{{Phone}}': 'User phone number (from prospectUserPhone)',
+  '{{CompanyName}}': 'Company name (from companyName)',
+  '{{Company}}': 'Company name (alias)',
+  '{{JobFunction}}': 'Job function (from jobFunctionName)',
+  '{{JobLevel}}': 'Job level/seniority (from jobLevelName)',
+  '{{Industry}}': 'Industry sector (from industryName)',
+  '{{Region}}': 'Geographic region (from regionName)',
+  '{{Location}}': 'Location (alias for region)',
+  '{{LeadType}}': 'Type of lead (from leadTypeName)',
+  '{{Department}}': 'Department (alias for JobFunction)',
+  '{{Country}}': 'Country (using region as fallback)',
+
+  // ✅ Available from Campaign/Subject (need to fetch)
+  '{{CampaignName}}': 'Name of the campaign',
+  '{{SubjectName}}': 'Email subject line name',
+
+  // ✅ System Generated
+  '{{CurrentDate}}': 'Current date',
+  '{{CurrentYear}}': 'Current year', 
+  '{{CurrentMonth}}': 'Current month name',
+  '{{Today}}': 'Today\'s date',
+  '{{UnsubscribeLink}}': 'Automatic unsubscribe link with user email',
+  '{{WebsiteURL}}': 'Your website URL',
+  '{{CompanyWebsite}}': 'Your company website',
+};
