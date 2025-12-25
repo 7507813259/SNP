@@ -18,18 +18,18 @@ export default function Footer() {
         {/* LOGO + BADGES */}
         <div>
           <div className='mb-4 flex items-center gap-3'>
-            <Image src='/sgn-logo.png' alt='SGN' width={60} height={60} />
+            <Image src='/assets/mhgov.webp' alt='SGN' width={60} height={60} />
             <h3 className='text-lg font-bold text-[#7a1e4f]'>
               शेगाव नगर परिषद
             </h3>
           </div>
 
           <div className='mb-4 flex flex-wrap gap-2'>
-            <Image src='/w3c-css.png' alt='' width={40} height={40} />
-            <Image src='/w3c-html.png' alt='' width={40} height={40} />
-            <Image src='/stqc.png' alt='' width={40} height={40} />
-            <Image src='/gigw.png' alt='' width={40} height={40} />
-            <Image src='/wcag.png' alt='' width={40} height={40} />
+            <Image src='/assets/mhgov.webp' alt='' width={40} height={40} />
+            <Image src='/assets/mhgov.webp' alt='' width={40} height={40} />
+            <Image src='/assets/mhgov.webp' alt='' width={40} height={40} />
+            <Image src='/assets/mhgov.webp' alt='' width={40} height={40} />
+            <Image src='/assets/mhgov.webp' alt='' width={40} height={40} />
           </div>
 
           <div className='w-fit rounded-xl bg-white px-4 py-3 text-sm text-gray-700 shadow'>
@@ -127,11 +127,11 @@ export default function Footer() {
 
         <div className='flex flex-col items-center gap-2'>
           <div className='flex gap-3'>
-            <Image src='/fb.svg' alt='' width={32} height={32} />
-            <Image src='/insta.svg' alt='' width={32} height={32} />
-            <Image src='/x.svg' alt='' width={32} height={32} />
-            <Image src='/yt.svg' alt='' width={32} height={32} />
-            <Image src='/wa.svg' alt='' width={32} height={32} />
+            <Image src='/assets/mhgov.webp' alt='' width={32} height={32} />
+            <Image src='/assets/mhgov.webp' alt='' width={32} height={32} />
+            <Image src='/assets/mhgov.webp' alt='' width={32} height={32} />
+            <Image src='/assets/mhgov.webp' alt='' width={32} height={32} />
+            <Image src='/assets/mhgov.webp' alt='' width={32} height={32} />
           </div>
           <div>२९/०३/२०२५ रोजी अद्ययावत केले</div>
         </div>
@@ -155,7 +155,7 @@ export default function Footer() {
 
       {/* FLOATING LOGO */}
       <button className='fixed right-20 bottom-6 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow'>
-        <Image src='/sgn-logo.png' alt='SGN' width={30} height={30} />
+        <Image src='/assets/mhgov.webp' alt='SGN' width={30} height={30} />
       </button>
     </footer>
   );

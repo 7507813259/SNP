@@ -9,7 +9,7 @@ const officials = [
     name: 'श्री. रमेश पाटील',
     designation: 'महापौर',
     subtitle: 'शेगाव नगर परिषद',
-    image: '/officials/mayor.jpg',
+    image: '/assets/mhgov.webp',
     icon: Award
   },
   {
@@ -17,7 +17,7 @@ const officials = [
     name: 'श्री. विजय कुमार',
     designation: 'मुख्य कार्यकारी अधिकारी',
     subtitle: '(सामान्य)',
-    image: '/officials/ceo.jpg',
+    image: '/assets/mhgov.webp',
     icon: Briefcase
   },
   {
@@ -25,7 +25,7 @@ const officials = [
     name: 'श्री. संजय देशमुख',
     designation: 'अतिरिक्त कार्यकारी अधिकारी',
     subtitle: '(योजना)',
-    image: '/officials/deputy-ceo.jpg',
+    image: '/assets/mhgov.webp',
     icon: User
   },
   {
@@ -33,7 +33,7 @@ const officials = [
     name: 'श्री. प्रवीण गायकवाड',
     designation: 'अतिरिक्त कार्यकारी अधिकारी',
     subtitle: '(विशेष)',
-    image: '/officials/special-officer.jpg',
+    image: '/assets/mhgov.webp',
     icon: User
   }
 ];

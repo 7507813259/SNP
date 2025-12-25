@@ -67,7 +67,7 @@ export default function AppSidebar() {
         <div className='flex flex-col items-center justify-start'>
           {state === 'collapsed' && !openMobile ? (
             <Image
-              src=''
+              src='/assets/mhgov.webp'
               width={22}
               height={22}
               alt='Logo'
@@ -75,9 +75,9 @@ export default function AppSidebar() {
             />
           ) : (
             <Image
-              src=''
-              width={150}
-              height={150}
+              src='/assets/mhgov.webp'
+              width={30}
+              height={30}
               alt='Logo'
               className='flex justify-start'
             />
@@ -96,7 +96,7 @@ export default function AppSidebar() {
       </SidebarHeader>
       <SidebarContent className='overflow-x-hidden'>
         <SidebarGroup>
-          <SidebarGroupLabel>Overview</SidebarGroupLabel>
+          <SidebarGroupLabel>आढावा</SidebarGroupLabel> {/* Changed from "Overview" */}
           <SidebarMenu>
             {navItems.map((item) => {
               const Icon = item.icon ? Icons[item.icon] : Icons.logo;
@@ -212,15 +212,15 @@ export default function AppSidebar() {
                     onClick={() => router.push('/dashboard/profile')}
                   >
                     <IconUserCircle className='mr-2 h-4 w-4' />
-                    Profile
+                    प्रोफाइल {/* Changed from "Profile" */}
                   </DropdownMenuItem>
                   <DropdownMenuItem>
                     <IconCreditCard className='mr-2 h-4 w-4' />
-                    Billing
+                    बिलिंग {/* Changed from "Billing" */}
                   </DropdownMenuItem>
                   <DropdownMenuItem>
                     <IconBell className='mr-2 h-4 w-4' />
-                    Notifications
+                    सूचना {/* Changed from "Notifications" */}
                   </DropdownMenuItem>
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator />

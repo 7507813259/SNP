@@ -9,7 +9,7 @@ const newsItems = [
     id: 1,
     title:
       'उमेदवार थकबाकी ना-हरकत प्रमाणपत्र कक्ष येथे निवडणूक अधिकारी तथा अतिरिक्त आयुक्त मा. श्री. ओमप्रकाश दिवटे यांची भेट',
-    image: '/news/news-1.jpg',
+    image: '/assets/mhgov.webp',
     date: '१५ जानेवारी २०२५',
     category: 'निवडणूक',
     views: '१,२३४',
@@ -19,7 +19,7 @@ const newsItems = [
     id: 2,
     title:
       'बिबवेवाडी क्षेत्रीय कार्यालयात निवडणूक सुरक्षा व कायदा-सुव्यवस्थेबाबत समन्वय बैठक',
-    image: '/news/news-2.jpg',
+    image: '/assets/mhgov.webp',
     date: '१४ जानेवारी २०२५',
     category: 'बैठक',
     views: '९८७',
@@ -27,9 +27,8 @@ const newsItems = [
   },
   {
     id: 3,
-    title:
-      'शेगाव नगर परिषद सार्वत्रिक निवडणूक २०२५-२६ अनुषंगाने बैठक संपन्न',
-    image: '/news/news-3.jpg',
+    title: 'शेगाव नगर परिषद सार्वत्रिक निवडणूक २०२५-२६ अनुषंगाने बैठक संपन्न',
+    image: '/assets/mhgov.webp',
     date: '१३ जानेवारी २०२५',
     category: 'निवडणूक',
     views: '२,१५६',
@@ -41,8 +40,8 @@ export default function NewsUpdates() {
   return (
     <section className='relative overflow-hidden bg-gradient-to-b from-white via-gray-50 to-white py-16'>
       {/* Decorative Elements */}
-      <div className='absolute left-0 top-0 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full bg-pink-200/20 blur-3xl' />
-      <div className='absolute right-0 top-0 h-40 w-40 translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-200/20 blur-3xl' />
+      <div className='absolute top-0 left-0 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full bg-pink-200/20 blur-3xl' />
+      <div className='absolute top-0 right-0 h-40 w-40 translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-200/20 blur-3xl' />
 
       <div className='relative mx-auto max-w-7xl px-6'>
         {/* Header */}
@@ -67,7 +66,7 @@ export default function NewsUpdates() {
           {newsItems.map((news) => (
             <article
               key={news.id}
-              className='group relative overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1'
+              className='group relative overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl'
             >
               {/* Image Container */}
               <div className='relative h-56 w-full overflow-hidden bg-gray-200'>
@@ -78,11 +77,12 @@ export default function NewsUpdates() {
                   className='object-cover transition-transform duration-500 group-hover:scale-110'
                   onError={(e) => {
                     // Fallback to placeholder if image doesn't exist
-                    e.currentTarget.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23e5e7eb" width="400" height="300"/%3E%3Ctext fill="%239ca3af" font-family="sans-serif" font-size="20" dy="10.5" font-weight="bold" x="50%25" y="50%25" text-anchor="middle"%3EImage%3C/text%3E%3C/svg%3E';
+                    e.currentTarget.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23e5e7eb" width="400" height="300"/%3E%3Ctext fill="%239ca3af" font-family="sans-serif" font-size="20" dy="10.5" font-weight="bold" x="50%25" y="50%25" text-anchor="middle"%3EImage%3C/text%3E%3C/svg%3E';
                   }}
                 />
                 {/* Category Badge */}
-                <div className='absolute left-4 top-4'>
+                <div className='absolute top-4 left-4'>
                   <span className='rounded-full bg-[#b01d4f] px-3 py-1 text-xs font-medium text-white shadow-lg'>
                     {news.category}
                   </span>
@@ -106,7 +106,7 @@ export default function NewsUpdates() {
                 </div>
 
                 {/* Title */}
-                <h3 className='mb-4 line-clamp-3 text-lg font-semibold leading-tight text-gray-900 transition-colors duration-300 group-hover:text-[#b01d4f]'>
+                <h3 className='mb-4 line-clamp-3 text-lg leading-tight font-semibold text-gray-900 transition-colors duration-300 group-hover:text-[#b01d4f]'>
                   {news.title}
                 </h3>
 
@@ -140,4 +140,3 @@ export default function NewsUpdates() {
     </section>
   );
 }
-

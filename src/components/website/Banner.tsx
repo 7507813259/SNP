@@ -10,7 +10,7 @@ import 'swiper/css/navigation';
 const slides = [
   {
     id: 1,
-    image: '/slider/slide-1.jpg',
+    image: '/assets/mhgov.webp',
     alt: 'Shegaon Nagar Parishad Event',
     title: 'आता जगाची वारी,',
     subtitle: 'भारतात पुण्याच्या वारी!',
@@ -18,7 +18,7 @@ const slides = [
   },
   {
     id: 2,
-    image: '/slider/slide-2.jpg',
+    image: '/assets/mhgov.webp',
     alt: 'Shegaon Development',
     title: 'शेगाव नगर परिषद',
     subtitle: 'सर्वांसाठी विकास',
@@ -61,7 +61,7 @@ export default function HeroSlider() {
               <div className='absolute inset-0 flex items-center'>
                 <div className='mx-auto max-w-7xl px-6'>
                   <div className='max-w-2xl'>
-                    <h2 className='mb-4 text-3xl font-bold leading-tight text-white drop-shadow-2xl md:text-5xl lg:text-6xl'>
+                    <h2 className='mb-4 text-3xl leading-tight font-bold text-white drop-shadow-2xl md:text-5xl lg:text-6xl'>
                       {slide.title}
                       <br />
                       <span className='text-yellow-300'>{slide.subtitle}</span>

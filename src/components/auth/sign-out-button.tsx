@@ -11,23 +11,28 @@ export function SignOutButton() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleLogout = async () => {
-    setIsLoading(true);
-    try {
-      const apiUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/api/auth/logout`;
-      await axios.post(apiUrl, {
-        withCredentials: true
-      });
-      dispatch(logout());
-      router.push('/auth/sign-in');
-      toast.success('Signed out Successfully!');
-    } catch (error) {
-      console.error('Logout failed:', error);
-    } finally {
-      setIsLoading(false);
-    }
+  // const handleLogout = async () => {
+  //   setIsLoading(true);
+  //   try {
+  //     const apiUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/api/auth/logout`;
+  //     await axios.post(apiUrl, {
+  //       withCredentials: true
+  //     });
+  //     dispatch(logout());
+  //     router.push('/auth/sign-in');
+  //     toast.success('Signed out Successfully!');
+  //   } catch (error) {
+  //     console.error('Logout failed:', error);
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // };
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    localStorage.removeItem('isAuthenticated');
+    dispatch(logout());
+    router.push('/home/sign-in');
   };
-
   return (
     <>
       <div onClick={handleLogout} className='w-full cursor-pointer'>

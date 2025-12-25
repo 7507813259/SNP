@@ -17,7 +17,7 @@ const interactionCards = [
     title: 'समस्या नोंदवा',
     description: 'तुमच्या समस्येची तक्रार नोंदवा',
     icon: AlertCircle,
-    href: '/complaints',
+    href: '/dashboard',
     gradient: 'from-red-500 to-pink-600',
     bgColor: 'bg-red-50',
     iconColor: 'text-red-600',
@@ -79,7 +79,7 @@ export default function CitizenInteraction() {
                   <Link
                     key={card.id}
                     href={card.href}
-                    className={`group relative overflow-hidden rounded-2xl ${card.bgColor} p-6 transition-all duration-300 ${card.hoverBg} hover:shadow-xl hover:-translate-y-1`}
+                    className={`group relative overflow-hidden rounded-2xl ${card.bgColor} p-6 transition-all duration-300 ${card.hoverBg} hover:-translate-y-1 hover:shadow-xl`}
                   >
                     {/* Gradient Background on Hover */}
                     <div
@@ -115,7 +115,7 @@ export default function CitizenInteraction() {
 
                     {/* Decorative Element */}
                     <div
-                      className={`absolute -right-8 -top-8 h-24 w-24 rounded-full bg-gradient-to-br ${card.gradient} opacity-5 transition-opacity duration-300 group-hover:opacity-10`}
+                      className={`absolute -top-8 -right-8 h-24 w-24 rounded-full bg-gradient-to-br ${card.gradient} opacity-5 transition-opacity duration-300 group-hover:opacity-10`}
                     />
                   </Link>
                 );
@@ -132,9 +132,7 @@ export default function CitizenInteraction() {
                 <ThumbsUp className='h-6 w-6 text-[#b01d4f]' />
               </div>
               <div>
-                <h4 className='font-semibold text-gray-900'>
-                  त्वरित प्रतिसाद
-                </h4>
+                <h4 className='font-semibold text-gray-900'>त्वरित प्रतिसाद</h4>
                 <p className='text-sm text-gray-600'>
                   आम्ही २४ तासांत तुमच्याशी संपर्क साधतो
                 </p>
@@ -160,4 +158,3 @@ export default function CitizenInteraction() {
     </section>
   );
 }
-

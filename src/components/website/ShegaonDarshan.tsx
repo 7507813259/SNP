@@ -14,7 +14,7 @@ const darshanPlaces = [
     id: 1,
     name: 'आनंद सागर',
     description: 'कृत्रिम तलाव व उद्यान संकुल',
-    image: '/shegaon/anan-sagar.jpg',
+    image: '/assets/mhgov.webp',
     category: 'उद्यान',
     rating: '४.५',
     href: '/darshan/anand-sagar'
@@ -23,7 +23,7 @@ const darshanPlaces = [
     id: 2,
     name: 'गजानन महाराज मंदिर',
     description: 'प्रसिद्ध आध्यात्मिक केंद्र',
-    image: '/shegaon/ganesh-mandir.jpg',
+    image: '/assets/mhgov.webp',
     category: 'मंदिर',
     rating: '४.८',
     href: '/darshan/gajanan-maharaj-temple'
@@ -32,7 +32,7 @@ const darshanPlaces = [
     id: 3,
     name: 'शेगाव किल्ला',
     description: 'ऐतिहासिक वारसा',
-    image: '/shegaon/fort.jpg',
+    image: '/assets/mhgov.webp',
     category: 'ऐतिहासिक',
     rating: '४.३',
     href: '/darshan/fort'
@@ -41,7 +41,7 @@ const darshanPlaces = [
     id: 4,
     name: 'नगर परिषद उद्यान',
     description: 'नागरिक विश्रांती केंद्र',
-    image: '/shegaon/park.jpg',
+    image: '/assets/mhgov.webp',
     category: 'उद्यान',
     rating: '४.२',
     href: '/darshan/park'

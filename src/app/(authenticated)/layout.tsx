@@ -16,7 +16,7 @@ export default function AuthenticatedLayout({
   useEffect(() => {
     //loading finished but user is not authenticated
     if (status === 'unauthenticated') {
-      router.push('/auth/sign-in');
+      router.push('/home/sign-in');
     }
   }, [status, router]);
 

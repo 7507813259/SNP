@@ -2,13 +2,25 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 type AuthStatus = 'loading' | 'authenticated' | 'unauthenticated';
 
+// interface AuthState {
+//   user: null | { id: string; email: string };
+//   status: AuthStatus;
+// }
 interface AuthState {
-  user: null | { id: string; email: string };
+  user: null | {
+    id: string;
+    email: string;
+    name?: string;
+    role?: string;
+    department?: string;
+    permissions?: string[];
+    token?: string;
+  };
   status: AuthStatus;
 }
-
 const initialState: AuthState = {
   user: null,
+
   status: 'loading'
 };
 

@@ -2,8 +2,8 @@ import { LoginForm } from '@/components/auth/login';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Authentication | Sign In',
-  description: 'Sign In page for authentication.'
+  title: 'लॉगिन | प्रमाणीकरण',
+  description: 'खात्यात प्रवेश करण्यासाठी लॉगिन पृष्ठ.'
 };
 
 export default async function Page() {

@@ -13,37 +13,37 @@ const govtLinks = [
   {
     name: 'Smart City Mission',
     href: 'https://smartcities.gov.in',
-    img: '/gov/smart-city.png'
+    img: '/assets/mhgov.webp'
   },
   {
     name: 'Government of Maharashtra',
     href: 'https://www.maharashtra.gov.in',
-    img: '/gov/maharashtra-gov.png'
+    img: '/assets/mhgov.webp'
   },
   {
     name: 'MATTRI',
     href: 'https://matri.maharashtra.gov.in',
-    img: '/gov/mattri.png'
+    img: '/assets/mhgov.webp'
   },
   {
     name: 'DigiLocker',
     href: 'https://www.digilocker.gov.in',
-    img: '/gov/digilocker.png'
+    img: '/assets/mhgov.webp'
   },
   {
     name: 'Right to Information',
     href: 'https://rti.gov.in',
-    img: '/gov/rti.png'
+    img: '/assets/mhgov.webp'
   },
   {
     name: 'SGN CARE',
     href: '#',
-    img: '/gov/sgn-care.png'
+    img: '/assets/mhgov.webp'
   },
   {
     name: 'MyGov India',
     href: 'https://www.mygov.in',
-    img: '/gov/mygov.png'
+    img: '/assets/mhgov.webp'
   }
 ];
 
