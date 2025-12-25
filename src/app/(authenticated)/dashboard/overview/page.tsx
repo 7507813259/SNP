@@ -142,9 +142,7 @@ import {
   Hotel,
   School as SchoolIcon,
   Hospital,
-  Bank,
   Church,
-  Mosque,
   Castle,
   Crown,
   Award as AwardIcon,
@@ -184,6 +182,69 @@ export default function GovernmentDashboard() {
   const user = auth?.user;
   const isAdmin = user?.role === 'admin';
   const isAuthenticated = auth?.status === 'authenticated';
+  const dashboardStats = isAdmin
+    ? [
+        {
+          title: 'एकूण अर्ज',
+          value: stats.totalApplications.toLocaleString(),
+          change: '+12.5%',
+          icon: FileText,
+          color: 'from-[#b01d4f] to-[#7a1e4f]'
+        },
+        {
+          title: 'प्रलंबित अर्ज',
+          value: stats.pendingApplications.toLocaleString(),
+          change: '-8.2%',
+          icon: Clock,
+          color: 'from-amber-500 to-amber-700'
+        },
+        {
+          title: 'सक्रिय वापरकर्ते',
+          value: stats.activeUsers.toLocaleString(),
+          change: '+5.3%',
+          icon: Users,
+          color: 'from-blue-500 to-blue-700'
+        },
+        {
+          title: 'महसूल',
+          value: `₹${(stats.revenue / 100000).toFixed(1)} लाख`,
+          change: '+4.2%',
+          icon: Landmark,
+          color: 'from-green-500 to-green-700'
+        }
+      ]
+    : [
+        {
+          title: 'माझे एकूण अर्ज',
+          value: stats.userApplications.toString(),
+          change: '+२ नवीन',
+          icon: FileText,
+          color: 'from-[#b01d4f] to-[#7a1e4f]'
+        },
+        {
+          title: 'प्रलंबित अर्ज',
+          value: stats.userPendingApplications.toString(),
+          change: 'सोडवण्यासाठी',
+          icon: Clock,
+          color: 'from-amber-500 to-amber-700'
+        },
+        {
+          title: 'सोडवलेले अर्ज',
+          value: (
+            stats.userApplications - stats.userPendingApplications
+          ).toString(),
+          change: 'यशस्वी',
+          icon: CheckCircle,
+          color: 'from-green-500 to-green-700'
+        },
+        {
+          title: 'सेवा उपलब्ध',
+          value: '१४+',
+          change: 'श्रेण्या',
+          icon: Award,
+          color: 'from-blue-500 to-blue-700'
+        }
+      ];
 
   // Service categories - different for admin vs user
   const serviceCategories = isAdmin
@@ -692,97 +753,34 @@ export default function GovernmentDashboard() {
 
       {/* Stats Overview */}
       <div className='mb-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4'>
-        {isAdmin
-          ? [
-              {
-                title: 'एकूण अर्ज',
-                value: stats.totalApplications.toLocaleString(),
-                change: '+12.5%',
-                icon: FileText,
-                color: 'from-[#b01d4f] to-[#7a1e4f]'
-              },
-              {
-                title: 'प्रलंबित अर्ज',
-                value: stats.pendingApplications.toLocaleString(),
-                change: '-8.2%',
-                icon: Clock,
-                color: 'from-amber-500 to-amber-700'
-              },
-              {
-                title: 'सक्रिय वापरकर्ते',
-                value: stats.activeUsers.toLocaleString(),
-                change: '+5.3%',
-                icon: Users,
-                color: 'from-blue-500 to-blue-700'
-              },
-              {
-                title: 'महसूल',
-                value: `₹${(stats.revenue / 100000).toFixed(1)} लाख`,
-                change: '+4.2%',
-                icon: Landmark,
-                color: 'from-green-500 to-green-700'
-              }
-            ]
-          : [
-              {
-                title: 'माझे एकूण अर्ज',
-                value: stats.userApplications.toString(),
-                change: '+२ नवीन',
-                icon: FileText,
-                color: 'from-[#b01d4f] to-[#7a1e4f]'
-              },
-              {
-                title: 'प्रलंबित अर्ज',
-                value: stats.userPendingApplications.toString(),
-                change: 'सोडवण्यासाठी',
-                icon: Clock,
-                color: 'from-amber-500 to-amber-700'
-              },
-              {
-                title: 'सोडवलेले अर्ज',
-                value: (
-                  stats.userApplications - stats.userPendingApplications
-                ).toString(),
-                change: 'यशस्वी',
-                icon: CheckCircle,
-                color: 'from-green-500 to-green-700'
-              },
-              {
-                title: 'सेवा उपलब्ध',
-                value: '१४+',
-                change: 'श्रेण्या',
-                icon: Award,
-                color: 'from-blue-500 to-blue-700'
-              }
-            ].map((stat, index) => (
-              <Card key={index}>
-                <CardContent className='p-6'>
-                  <div className='flex items-center justify-between'>
-                    <div>
-                      <p className='text-sm text-gray-500'>{stat.title}</p>
-                      <h3 className='mt-1 text-2xl font-bold'>{stat.value}</h3>
-                      <div className='mt-2 flex items-center'>
-                        {stat.change.startsWith('+') ? (
-                          <TrendingUp className='mr-1 h-4 w-4 text-green-500' />
-                        ) : stat.change.startsWith('-') ? (
-                          <TrendingDown className='mr-1 h-4 w-4 text-red-500' />
-                        ) : null}
-                        <span
-                          className={`text-sm ${stat.change.startsWith('+') ? 'text-green-600' : stat.change.startsWith('-') ? 'text-red-600' : 'text-gray-600'}`}
-                        >
-                          {stat.change}
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      className={`rounded-lg bg-gradient-to-r p-3 ${stat.color}`}
-                    >
-                      <stat.icon className='h-6 w-6 text-white' />
-                    </div>
+        {dashboardStats.map((stat, index) => (
+          <Card key={index}>
+            <CardContent className='p-6'>
+              <div className='flex items-center justify-between'>
+                <div>
+                  <p className='text-sm text-gray-500'>{stat.title}</p>
+                  <h3 className='mt-1 text-2xl font-bold'>{stat.value}</h3>
+
+                  <div className='mt-2 flex items-center'>
+                    {stat.change.startsWith('+') && (
+                      <TrendingUp className='mr-1 h-4 w-4 text-green-500' />
+                    )}
+                    {stat.change.startsWith('-') && (
+                      <TrendingDown className='mr-1 h-4 w-4 text-red-500' />
+                    )}
+                    <span className='text-sm text-gray-600'>{stat.change}</span>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
+                </div>
+
+                <div
+                  className={`rounded-lg bg-gradient-to-r p-3 ${stat.color}`}
+                >
+                  <stat.icon className='h-6 w-6 text-white' />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
       </div>
 
       {/* Main Dashboard Content */}
@@ -832,7 +830,11 @@ export default function GovernmentDashboard() {
                                     {category.name}
                                   </h4>
                                   <p className='text-sm text-gray-500'>
-                                    {category.count} सेवा
+                                    {'count' in category && (
+                                      <p className='text-sm text-gray-500'>
+                                        {category.count} सेवा
+                                      </p>
+                                    )}
                                   </p>
                                 </div>
                               </div>
@@ -840,21 +842,32 @@ export default function GovernmentDashboard() {
                                 variant='outline'
                                 className='bg-red-50 text-red-700'
                               >
-                                {category.pending} प्रलंबित
+                                {'pending' in category && (
+                                  <Badge
+                                    variant='outline'
+                                    className='bg-red-50 text-red-700'
+                                  >
+                                    {category.pending} प्रलंबित
+                                  </Badge>
+                                )}
                               </Badge>
                             </div>
-                            <Progress
-                              value={100 - (category.pending / 300) * 100}
-                              className='mt-4'
-                            />
+                            {'pending' in category && (
+                              <Progress
+                                value={100 - (category.pending / 300) * 100}
+                                className='mt-4'
+                              />
+                            )}
                             <div className='mt-2 flex justify-between text-sm'>
                               <span className='text-gray-500'>प्रगती</span>
-                              <span className='font-medium'>
-                                {Math.round(
-                                  100 - (category.pending / 300) * 100
-                                )}
-                                %
-                              </span>
+                              {'pending' in category && (
+                                <span className='font-medium'>
+                                  {Math.round(
+                                    100 - (category.pending / 300) * 100
+                                  )}
+                                  %
+                                </span>
+                              )}
                             </div>
                           </CardContent>
                         </Card>
@@ -1208,9 +1221,11 @@ export default function GovernmentDashboard() {
                             </div>
                             <div className='flex-1'>
                               <h4 className='font-medium'>{service.name}</h4>
-                              <p className='mt-1 text-sm text-gray-500'>
-                                {service.description}
-                              </p>
+                              {'description' in service && (
+                                <p className='mt-1 text-sm text-gray-500'>
+                                  {service.description}
+                                </p>
+                              )}
                             </div>
                           </div>
                           <Button variant='ghost' className='mt-4 w-full'>
