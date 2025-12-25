@@ -65,7 +65,7 @@ export default function TopUtilityBar() {
             </button>
 
             <Link
-              href='/auth/sign-in'
+              href='/home/sign-in'
               className='group flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[#b01d4f] to-[#7a1e4f] px-4 py-1.5 text-sm font-medium text-white shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105'
             >
               <LogIn size={14} className='transition-transform duration-300 group-hover:translate-x-0.5' />

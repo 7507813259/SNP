@@ -13,7 +13,7 @@ export type Product = {
 
 export const navItems: NavItem[] = [
   {
-    title: 'Dashboard',
+    title: 'मुख्य नियंत्रण फलक',
     url: '/dashboard/overview',
     icon: 'dashboard',
     isActive: false,
@@ -21,30 +21,42 @@ export const navItems: NavItem[] = [
     items: []
   },
   {
-    title: 'Account',
+    title: 'प्रशासकीय खाते',
     url: '#',
     icon: 'billing',
     isActive: true,
 
     items: [
-      // {
-      //   title: 'Email Subject',
-      //   url: '/dashboard/masters/email-subject',
-      //   icon: 'userPen',
-      //   shortcut: ['m', 'm']
-      // }
-      // {
-      //   title: 'Profile',
-      //   url: '/dashboard/profile',
-      //   icon: 'userPen',
-      //   shortcut: ['m', 'm']
-      // },
-      // {
-      //   title: 'Login',
-      //   shortcut: ['l', 'l'],
-      //   url: '/',
-      //   icon: 'login'
-      // }
+      {
+        title: 'विभाग कार्यक्षमता',
+        url: '/dashboard/recent-activity',
+        icon: 'userPen',
+        shortcut: ['m', 'm']
+      },
+      {
+        title: 'अलीकडील क्रियाकलाप',
+        url: '/dashboard/department-efficiency',
+        icon: 'userPen',
+        shortcut: ['m', 'm']
+      },
+      {
+        title: 'अर्ज व्यवस्थापन',
+        shortcut: ['l', 'l'],
+        url: '/dashboard/application-management',
+        icon: 'login'
+      },
+      {
+        title: 'कर मागोवा',
+        shortcut: ['l', 'l'],
+        url: '/dashboard/tax-tracking',
+        icon: 'login'
+      },
+      {
+        title: 'पाणी जोडणी व्यवस्थापन',
+        shortcut: ['l', 'l'],
+        url: '/dashboard/water-management',
+        icon: 'login'
+      }
     ]
   },
   // {

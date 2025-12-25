@@ -90,7 +90,7 @@ export default function Header() {
           </div>
 
           {/* Navigation */}
-          <nav className='hidden items-center gap-8 text-sm font-medium md:flex'>
+          <nav className='hidden items-center gap-8 text-md font-medium md:flex'>
             <Link
               href='#'
               className='border-b-2 border-red-600 pb-1 text-red-600'
