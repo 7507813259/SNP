@@ -1179,7 +1179,7 @@ export default function BirthCertificatePage() {
                     <SelectTrigger className='mt-1 w-full border-[#b01d4f]/20 focus:border-[#b01d4f]'>
                       <SelectValue placeholder='Select relation' />
                     </SelectTrigger>
-                    <SelectContent classname='w-full'>
+                    <SelectContent>
                       <SelectItem value='वडील'>वडील</SelectItem>
                       <SelectItem value='आई'>आई</SelectItem>
                       <SelectItem value='पालक'>पालक</SelectItem>
