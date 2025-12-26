@@ -10,19 +10,27 @@ import 'swiper/css/navigation';
 const slides = [
   {
     id: 1,
-    image: '/assets/mhgov.webp',
+    image: '/assets/banner1.jpg',
     alt: 'Shegaon Nagar Parishad Event',
-    title: 'आता जगाची वारी,',
-    subtitle: 'भारतात पुण्याच्या वारी!',
-    description: 'SGN Shegaon Nagar Parishad – Official Initiatives & Events'
+    title: '',
+    subtitle: '',
+    description: ''
   },
   {
     id: 2,
-    image: '/assets/mhgov.webp',
+    image: '/assets/banner2.jpg',
     alt: 'Shegaon Development',
-    title: 'शेगाव नगर परिषद',
-    subtitle: 'सर्वांसाठी विकास',
-    description: 'नागरिकांच्या सेवेसाठी समर्पित'
+    title: '',
+    subtitle: '',
+    description: ''
+  },
+  {
+    id: 3,
+    image: '/assets/banner3.jpg',
+    alt: 'Shegaon Development',
+    title: '',
+    subtitle: '',
+    description: ''
   }
 ];
 
@@ -55,7 +63,7 @@ export default function HeroSlider() {
               />
 
               {/* Gradient Overlay */}
-              <div className='absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30' />
+              {/* <div className='absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30' /> */}
 
               {/* Content */}
               <div className='absolute inset-0 flex items-center'>
@@ -64,7 +72,7 @@ export default function HeroSlider() {
                     <h2 className='mb-4 text-3xl leading-tight font-bold text-white drop-shadow-2xl md:text-5xl lg:text-6xl'>
                       {slide.title}
                       <br />
-                      <span className='text-yellow-300'>{slide.subtitle}</span>
+                      {/* <span className='text-yellow-300'>{slide.subtitle}</span> */}
                     </h2>
 
                     <p className='mt-6 text-base text-white/90 drop-shadow-lg md:text-lg'>

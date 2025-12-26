@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import {
   FileText,
   Calendar,
@@ -13,11 +12,12 @@ import {
   Clock,
   CheckCircle
 } from 'lucide-react';
+import Link from 'next/link';
 
 const tabs = [
+  { id: 'online-services', label: 'ऑनलाईन सेवा', icon: Globe },
   { id: 'press-note', label: 'प्रेस नोट', icon: FileText },
   { id: 'general-info', label: 'सर्वसाधारण माहिती', icon: Info },
-  { id: 'online-services', label: 'ऑनलाईन सेवा', icon: Globe },
   { id: 'emergency-contact', label: 'आपत्कालीन संपर्क', icon: Phone }
 ];
 
@@ -135,31 +135,73 @@ const generalInfo = [
     href: '/wards'
   }
 ];
-
 const onlineServices = [
   {
     id: 1,
     title: 'मालमत्ता कर भरणे',
-    href: '/services/property-tax',
+    href: '/property-tax',
     icon: '₹'
   },
   {
     id: 2,
     title: 'जन्म प्रमाणपत्र',
-    href: '/services/birth-certificate',
+    href: '/birth-certificate',
     icon: '👶'
   },
   {
     id: 3,
     title: 'मृत्यु प्रमाणपत्र',
-    href: '/services/death-certificate',
+    href: '/death-certificate',
     icon: '✝️'
   },
   {
     id: 4,
-    title: 'ट्रेड लायसन्स',
-    href: '/services/trade-license',
-    icon: '🏪'
+    title: 'पाणी कर भरणे',
+    href: '/water-tax',
+    icon: '💧'
+  },
+  {
+    id: 5,
+    title: 'घरपट्टी थकबाकी तपासणी',
+    href: '/property-tax-check',
+    icon: '🏠'
+  },
+  {
+    id: 6,
+    title: 'निवासी दाखला',
+    href: '/residence-certificate',
+    icon: '📄'
+  },
+  {
+    id: 7,
+    title: 'विवाह नोंदणी',
+    href: '/marriage-registration',
+    icon: '💍'
+  },
+  {
+    id: 8,
+    title: 'तक्रार नोंदणी',
+    href: '/grievance',
+    icon: '📝'
+  },
+  {
+    id: 9,
+    title: 'नवीन नळ कनेक्शन',
+    href: '/new-water-connection',
+    icon: '🚰'
+  },
+
+  {
+    id: 10,
+    title: 'जाहिरात परवाना',
+    href: '/advertisement-license',
+    icon: '📢'
+  },
+  {
+    id: 11,
+    title: 'अधिक पहा',
+    href: '#',
+    icon: '🖥️'
   }
 ];
 
@@ -181,9 +223,9 @@ export default function InfoTabs() {
             <h3 className='mb-6 text-2xl font-bold text-gray-900'>प्रेस नोट</h3>
             <div className='max-h-[600px] space-y-3 overflow-y-auto pr-2'>
               {pressNotes.map((note) => (
-                <Link
+                <div
                   key={note.id}
-                  href={note.href}
+                  // href={note.href}
                   className='group block rounded-xl border-2 border-gray-200 bg-white p-5 transition-all duration-300 hover:border-[#b01d4f] hover:shadow-lg'
                 >
                   <div className='mb-2 flex items-center justify-between'>
@@ -200,7 +242,7 @@ export default function InfoTabs() {
                     <span>फाईल आकार: {note.fileSize}</span>
                     <span>फाइलचे स्वरूप: {note.fileType}</span>
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
           </div>
@@ -210,9 +252,9 @@ export default function InfoTabs() {
         return (
           <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
             {generalInfo.map((info) => (
-              <Link
+              <div
                 key={info.id}
-                href={info.href}
+                // href={info.href}
                 className='group rounded-xl border-2 border-gray-200 bg-white p-6 transition-all duration-300 hover:border-[#b01d4f] hover:shadow-lg'
               >
                 <h4 className='mb-3 text-xl font-semibold text-gray-900 group-hover:text-[#b01d4f]'>
@@ -223,7 +265,7 @@ export default function InfoTabs() {
                   <span>अधिक जाणून घ्या</span>
                   <ArrowRight className='h-4 w-4 transition-transform duration-300 group-hover:translate-x-1' />
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         );

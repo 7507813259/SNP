@@ -14,7 +14,7 @@ const darshanPlaces = [
     id: 1,
     name: 'आनंद सागर',
     description: 'कृत्रिम तलाव व उद्यान संकुल',
-    image: '/assets/mhgov.webp',
+    image: '/assets/anand-sagar.jpg',
     category: 'उद्यान',
     rating: '४.५',
     href: '/darshan/anand-sagar'
@@ -23,28 +23,37 @@ const darshanPlaces = [
     id: 2,
     name: 'गजानन महाराज मंदिर',
     description: 'प्रसिद्ध आध्यात्मिक केंद्र',
-    image: '/assets/mhgov.webp',
+    image: '/assets/temple.webp',
     category: 'मंदिर',
     rating: '४.८',
     href: '/darshan/gajanan-maharaj-temple'
   },
   {
     id: 3,
-    name: 'शेगाव किल्ला',
-    description: 'ऐतिहासिक वारसा',
-    image: '/assets/mhgov.webp',
-    category: 'ऐतिहासिक',
-    rating: '४.३',
-    href: '/darshan/fort'
-  },
-  {
-    id: 4,
-    name: 'नगर परिषद उद्यान',
-    description: 'नागरिक विश्रांती केंद्र',
-    image: '/assets/mhgov.webp',
+    name: 'आनंद सागर',
+    description: 'कृत्रिम तलाव व उद्यान संकुल',
+    image: '/assets/anand-sagar3.avif',
     category: 'उद्यान',
-    rating: '४.२',
-    href: '/darshan/park'
+    rating: '४.५',
+    href: '/darshan/anand-sagar'
+  },
+  // {
+  //   id: 4,
+  //   name: 'नगर परिषद उद्यान',
+  //   description: 'नागरिक विश्रांती केंद्र',
+  //   image: '/assets/mhgov.webp',
+  //   category: 'उद्यान',
+  //   rating: '४.२',
+  //   href: '/darshan/park'
+  // },
+  {
+    id: 5,
+    name: 'आनंद सागर',
+    description: 'कृत्रिम तलाव व उद्यान संकुल',
+    image: '/assets/anand-sagar4.jpeg',
+    category: 'उद्यान',
+    rating: '४.५',
+    href: '/darshan/anand-sagar'
   }
 ];
 
@@ -105,7 +114,7 @@ export default function ShegaonDarshan() {
         <div className='mb-10 overflow-hidden rounded-2xl bg-white shadow-lg'>
           <div className='flex flex-col lg:flex-row'>
             {/* LEFT: Slider */}
-            <div className='relative h-[400px] w-full lg:h-[500px] lg:w-1/2'>
+            <div className='relative h-[400px] w-full lg:h-[600px] lg:w-1/2'>
               <Swiper
                 modules={[Navigation, Autoplay]}
                 navigation
@@ -149,14 +158,14 @@ export default function ShegaonDarshan() {
                         <p className='mb-4 text-gray-200'>
                           {place.description}
                         </p>
-                        <Link
+                        {/* <Link
                           href={place.href}
                           className='group/btn inline-flex items-center gap-2 rounded-full bg-white/20 px-5 py-2.5 text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-[#b01d4f]'
                         >
                           <Camera className='h-4 w-4' />
                           <span>अधिक माहिती</span>
                           <ArrowRight className='h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1' />
-                        </Link>
+                        </Link> */}
                       </div>
                     </div>
                   </SwiperSlide>
@@ -167,9 +176,9 @@ export default function ShegaonDarshan() {
             {/* RIGHT: Cards Grid */}
             <div className='grid grid-cols-1 gap-6 p-8 sm:grid-cols-2 lg:w-1/2'>
               {infoCards.map((card) => (
-                <Link
+                <div
                   key={card.id}
-                  href={card.href}
+                  // href={card.href}
                   className='group relative overflow-hidden rounded-xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#b01d4f]/30 hover:shadow-lg'
                 >
                   {/* Hover Effect Background */}
@@ -193,7 +202,7 @@ export default function ShegaonDarshan() {
                       <ArrowRight className='h-5 w-5 text-[#b01d4f]' />
                     </div>
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
           </div>
@@ -201,14 +210,14 @@ export default function ShegaonDarshan() {
 
         {/* View All Link */}
         <div className='text-center'>
-          <Link
-            href='/darshan'
+          <div
+            // href='/darshan'
             className='group inline-flex items-center gap-2 text-lg font-semibold text-[#b01d4f] transition-all duration-300 hover:gap-3 hover:text-[#7a1e4f]'
           >
             <Heart className='h-5 w-5' />
             <span>शेगावची सर्व ठिकाणे पहा</span>
             <ArrowRight className='h-5 w-5 transition-transform duration-300 group-hover:translate-x-1' />
-          </Link>
+          </div>
         </div>
       </div>
     </section>

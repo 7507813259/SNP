@@ -13,7 +13,7 @@ const govtLinks = [
   {
     name: 'Smart City Mission',
     href: 'https://smartcities.gov.in',
-    img: '/assets/mhgov.webp'
+    img: '/assets/Smart-City.jpg'
   },
   {
     name: 'Government of Maharashtra',
@@ -21,29 +21,29 @@ const govtLinks = [
     img: '/assets/mhgov.webp'
   },
   {
-    name: 'MATTRI',
-    href: 'https://matri.maharashtra.gov.in',
-    img: '/assets/mhgov.webp'
-  },
-  {
     name: 'DigiLocker',
     href: 'https://www.digilocker.gov.in',
-    img: '/assets/mhgov.webp'
+    img: '/assets/digilocker.png'
   },
   {
     name: 'Right to Information',
     href: 'https://rti.gov.in',
-    img: '/assets/mhgov.webp'
-  },
-  {
-    name: 'SGN CARE',
-    href: '#',
-    img: '/assets/mhgov.webp'
+    img: '/assets/RTI.gif'
   },
   {
     name: 'MyGov India',
     href: 'https://www.mygov.in',
-    img: '/assets/mhgov.webp'
+    img: '/assets/mygovin.svg'
+  },
+  {
+    name: 'Digital India',
+    href: 'https://www.digitalindia.gov.in/',
+    img: '/assets/digital-india.svg'
+  },
+  {
+    name: 'Ministry of External Affairs',
+    href: 'https://www.mea.gov.in/',
+    img: '/assets/mea.png'
   }
 ];
 

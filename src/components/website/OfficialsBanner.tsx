@@ -127,16 +127,16 @@ export default function OfficialsBanner() {
 
         {/* Additional Info */}
         <div className='mt-8 text-center'>
-          <p className='text-sm text-gray-600'>
+          <div className='text-sm text-gray-600'>
             सर्व अधिकाऱ्यांशी संपर्क साधण्यासाठी{' '}
-            <a
-              href='/contact'
+            <div
+              // href='/contact'
               className='font-semibold text-[#b01d4f] hover:underline'
             >
               संपर्क पृष्ठ
-            </a>{' '}
+            </div>{' '}
             भेट द्या
-          </p>
+          </div>
         </div>
       </div>
     </section>

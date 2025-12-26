@@ -12,13 +12,13 @@ export default function Footer() {
     });
   };
   return (
-    <footer className='relative mt-20 rounded-t-[40px] bg-[#f7f7f7] pt-10'>
+    <footer className='relative mt-10 rounded-t-[40px] bg-[#f7f7f7] pt-10'>
       {/* TOP SECTION */}
       <div className='mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 md:grid-cols-4'>
         {/* LOGO + BADGES */}
         <div>
           <div className='mb-4 flex items-center gap-3'>
-            <Image src='/assets/mhgov.webp' alt='SGN' width={60} height={60} />
+            <Image src='/logo.png' alt='SGN' width={60} height={60} />
             <h3 className='text-lg font-bold text-[#7a1e4f]'>
               शेगाव नगर परिषद
             </h3>
@@ -32,10 +32,10 @@ export default function Footer() {
             <Image src='/assets/mhgov.webp' alt='' width={40} height={40} />
           </div>
 
-          <div className='w-fit rounded-xl bg-white px-4 py-3 text-sm text-gray-700 shadow'>
+          {/* <div className='w-fit rounded-xl bg-white px-4 py-3 text-sm text-gray-700 shadow'>
             भेट संख्या (मागील ३० दिवसांत):{' '}
             <span className='font-bold text-[#b01d4f]'>6,49,912</span>
-          </div>
+          </div> */}
         </div>
 
         {/* सेवा */}
@@ -136,9 +136,9 @@ export default function Footer() {
           <div>२९/०३/२०२५ रोजी अद्ययावत केले</div>
         </div>
 
-        <div>
+        {/* <div>
           डिझाईन व विकसित – स्टॅक डिजिटल मीडिया सोल्युशन्स प्रा. लि. द्वारे
-        </div>
+        </div> */}
       </div>
 
       {/* CITY ILLUSTRATION STRIP */}

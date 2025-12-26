@@ -17,7 +17,6 @@ const interactionCards = [
     title: 'समस्या नोंदवा',
     description: 'तुमच्या समस्येची तक्रार नोंदवा',
     icon: AlertCircle,
-    href: '/dashboard',
     gradient: 'from-red-500 to-pink-600',
     bgColor: 'bg-red-50',
     iconColor: 'text-red-600',
@@ -28,8 +27,6 @@ const interactionCards = [
     title: 'सूचना व प्रश्न शेअर करा',
     description: 'तुमच्या सूचना किंवा प्रश्न आमच्याशी शेअर करा',
     icon: MessageSquare,
-    href: '/suggestions',
-    gradient: 'from-blue-500 to-cyan-600',
     bgColor: 'bg-blue-50',
     iconColor: 'text-blue-600',
     hoverBg: 'hover:bg-blue-100'
@@ -39,7 +36,6 @@ const interactionCards = [
     title: 'तुमचा अभिप्राय द्या',
     description: 'तुमचा मौल्यवान अभिप्राय आमच्यासाठी महत्त्वाचा आहे',
     icon: Lightbulb,
-    href: '/feedback',
     gradient: 'from-amber-500 to-orange-600',
     bgColor: 'bg-amber-50',
     iconColor: 'text-amber-600',
@@ -76,9 +72,8 @@ export default function CitizenInteraction() {
               {interactionCards.map((card) => {
                 const Icon = card.icon;
                 return (
-                  <Link
+                  <div
                     key={card.id}
-                    href={card.href}
                     className={`group relative overflow-hidden rounded-2xl ${card.bgColor} p-6 transition-all duration-300 ${card.hoverBg} hover:-translate-y-1 hover:shadow-xl`}
                   >
                     {/* Gradient Background on Hover */}
@@ -105,19 +100,13 @@ export default function CitizenInteraction() {
                       <p className='mb-4 text-sm text-gray-600'>
                         {card.description}
                       </p>
-
-                      {/* Arrow Icon */}
-                      <div className='flex items-center gap-2 text-sm font-medium text-gray-700 transition-all duration-300 group-hover:gap-3'>
-                        <span>अधिक जाणून घ्या</span>
-                        <ArrowRight className='h-4 w-4 transition-transform duration-300 group-hover:translate-x-1' />
-                      </div>
                     </div>
 
                     {/* Decorative Element */}
                     <div
                       className={`absolute -top-8 -right-8 h-24 w-24 rounded-full bg-gradient-to-br ${card.gradient} opacity-5 transition-opacity duration-300 group-hover:opacity-10`}
                     />
-                  </Link>
+                  </div>
                 );
               })}
             </div>

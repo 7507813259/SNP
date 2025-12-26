@@ -78,10 +78,10 @@ export default function Header() {
           {/* Left Logo + Title */}
           <div className='flex items-center gap-3'>
             <Image
-              src='/sgn-logo.png'
+              src='/logo.png'
               alt='Shegaon Nagar Parishad Logo'
-              width={56}
-              height={56}
+              width={100}
+              height={100}
               priority
             />
             <h1 className='text-xl font-semibold whitespace-nowrap text-red-700'>
@@ -125,8 +125,8 @@ export default function Header() {
             <Image
               src='/assets/ingov.webp'
               alt='Government of India'
-              width={60}
-              height={60}
+              width={40}
+              height={40}
             />
           </div>
         </div>

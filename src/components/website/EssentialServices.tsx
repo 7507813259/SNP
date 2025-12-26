@@ -145,9 +145,9 @@ export default function EssentialServices() {
           {essentialServices.map((service) => {
             const Icon = service.icon;
             return (
-              <Link
+              <div
                 key={service.id}
-                href={service.href}
+                // href={service.href}
                 className={`group relative overflow-hidden rounded-2xl ${service.bgColor} p-6 transition-all duration-300 ${service.hoverBg} hover:-translate-y-1 hover:shadow-xl`}
               >
                 {/* Hover Effect Border */}
@@ -189,7 +189,7 @@ export default function EssentialServices() {
                     <ArrowRight className='h-4 w-4 transition-transform duration-300 group-hover:translate-x-1' />
                   </div>
                 </div>
-              </Link>
+              </div>
             );
           })}
         </div>
@@ -299,14 +299,14 @@ export default function EssentialServices() {
 
         {/* View All Link */}
         <div className='mt-12 text-center'>
-          <Link
-            href='/all-services'
+          <div
+            // href='/all-services'
             className='group inline-flex items-center gap-2 rounded-full bg-[#b01d4f] px-6 py-3 text-lg font-semibold text-white transition-all duration-300 hover:bg-[#7a1e4f] hover:shadow-lg'
           >
             <Phone className='h-5 w-5' />
             <span>सर्व सेवा पहा</span>
             <ArrowRight className='h-5 w-5 transition-transform duration-300 group-hover:translate-x-1' />
-          </Link>
+          </div>
         </div>
       </div>
     </section>
