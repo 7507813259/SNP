@@ -30,7 +30,7 @@ const SidebarNotifications = () => {
       date: '2024-01-13',
       type: 'info',
       category: 'परिवहन',
-      description: 'शेगाव ते अकोला नवीन बस मार्ग सुरू करण्यात येत आहे.'
+      description: 'शेगांव ते अकोला नवीन बस मार्ग सुरू करण्यात येत आहे.'
     },
     {
       id: 4,

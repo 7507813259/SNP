@@ -721,7 +721,7 @@ export default function GovernmentDashboard() {
         <div className='flex flex-col justify-between gap-4 md:flex-row md:items-center'>
           <div>
             <h1 className='text-3xl font-bold text-gray-900'>
-              शेगाव नगर परिषद {isAdmin ? 'प्रशासन' : 'नागरिक पोर्टल'}
+              शेगांव नगर परिषद {isAdmin ? 'प्रशासन' : 'नागरिक पोर्टल'}
             </h1>
             <p className='text-gray-600'>
               {isAdmin
@@ -1358,7 +1358,7 @@ export default function GovernmentDashboard() {
       <div className='mt-8 border-t pt-6'>
         <div className='flex flex-col items-center justify-between text-sm text-gray-500 md:flex-row'>
           <div>
-            © {new Date().getFullYear()} शेगाव नगर परिषद. सर्व हक्क राखीव.
+            © {new Date().getFullYear()} शेगांव नगर परिषद. सर्व हक्क राखीव.
           </div>
           <div className='mt-2 flex space-x-4 md:mt-0'>
             <span>संस्करण: २.४.१</span>

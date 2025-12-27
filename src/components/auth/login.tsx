@@ -40,23 +40,23 @@ export function LoginForm({
 
   const slides = [
     {
-      image: '/loginScreen/banner1.png',
+      image: '/assets/colage2.jpg',
       background: '/loginScreen/login-background.svg',
-      title: 'शेगाव नगर परिषद प्रशासन',
+      title: 'शेगांव नगर परिषद प्रशासन',
       text: 'नागरी सेवा, पारदर्शकता आणि कार्यक्षम प्रशासन'
     },
     {
-      image: '/loginScreen/banner2.png',
+      image: '/assets/collage1.jpg',
       background: '/loginScreen/login-background2.svg',
       title: 'नागरी सेवा पोर्टल',
       text: 'सर्व नागरी सेवा एकाच ठिकाणी, ऑनलाइन आणि सुलभ'
-    },
-    {
-      image: '/loginScreen/banner3.png',
-      background: '/loginScreen/login-background3.svg',
-      title: 'डिजिटल महाराष्ट्र',
-      text: 'तंत्रज्ञानाच्या सहाय्याने सुशासनाची हमी'
     }
+    // {
+    //   image: '/loginScreen/banner3.png',
+    //   background: '/loginScreen/login-background3.svg',
+    //   title: 'डिजिटल महाराष्ट्र',
+    //   text: 'तंत्रज्ञानाच्या सहाय्याने सुशासनाची हमी'
+    // }
   ];
 
   useEffect(() => {
@@ -81,7 +81,7 @@ export function LoginForm({
           email: email,
           name: email === 'admin@gmail.com' ? 'Admin User' : 'Regular User',
           role: email === 'admin@gmail.com' ? 'admin' : 'user',
-          department: 'शेगाव नगर परिषद',
+          department: 'शेगांव नगर परिषद',
           permissions:
             email === 'admin@gmail.com'
               ? ['read', 'write', 'delete', 'admin']
@@ -146,7 +146,7 @@ export function LoginForm({
               </div>
               <div>
                 <h1 className='text-xl font-bold text-gray-900'>
-                  शेगाव नगर परिषद
+                  शेगांव नगर परिषद
                 </h1>
                 <p className='text-sm text-gray-600'>नागरी प्रशासन पोर्टल</p>
               </div>
@@ -162,31 +162,21 @@ export function LoginForm({
 
         {/* Login Form Section */}
         <div className='mx-auto w-full max-w-md'>
-          {/* Government Portal Welcome */}
-          <div className='mb-8 text-center'>
-            <div className='mb-3 inline-flex items-center gap-2 rounded-full bg-[#b01d4f]/10 px-4 py-2'>
-              <Users className='h-4 w-4 text-[#b01d4f]' />
-              <span className='text-sm font-medium text-[#b01d4f]'>
-                कर्मचारी लॉगिन
-              </span>
-            </div>
-            <h2 className='mb-2 text-2xl font-bold text-gray-900'>
-              प्रशासनिक पोर्टलमध्ये स्वागत आहे
-            </h2>
-            <p className='text-sm text-gray-600'>
-              कृपया प्रवेश करण्यासाठी आपली प्रमाणित माहिती प्रविष्ट करा
-            </p>
-          </div>
-
           {/* Government Style Card */}
           <Card className='mb-6 overflow-hidden border border-gray-200 shadow-lg'>
             <div className='h-2 bg-gradient-to-r from-[#b01d4f] via-[#9c1c4c] to-[#7a1e4f]' />
             <CardHeader className='pb-4 text-center'>
               <CardTitle className='text-xl font-semibold text-gray-900'>
-                प्रवेश करा
+                <div className='mb-3 inline-flex items-center gap-2 rounded-full bg-[#b01d4f]/10 px-4 py-2'>
+                  <Users className='h-4 w-4 text-[#b01d4f]' />
+                  <span className='text-sm font-medium text-[#b01d4f]'>
+                    कर्मचारी लॉगिन
+                  </span>
+                </div>
               </CardTitle>
               <CardDescription className='text-gray-600'>
-                आपले कर्मचारी ईमेल आणि पासवर्ड प्रविष्ट करा
+                प्रशासनिक पोर्टलमध्ये स्वागत आहे, कृपया प्रवेश करण्यासाठी आपली
+                प्रमाणित माहिती प्रविष्ट करा
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -269,7 +259,7 @@ export function LoginForm({
           </Card>
 
           {/* Government Services Info */}
-          <div className='rounded-lg border border-gray-200 bg-white p-4 shadow-sm'>
+          {/* <div className='rounded-lg border border-gray-200 bg-white p-4 shadow-sm'>
             <div className='mb-3 flex items-center gap-2'>
               <FileCheck className='h-4 w-4 text-[#b01d4f]' />
               <h3 className='text-sm font-medium text-gray-900'>उपलब्ध सेवा</h3>
@@ -292,11 +282,11 @@ export function LoginForm({
                 ग्राहक समस्यानिवारण
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Footer */}
           <FieldDescription className='mt-6 text-center text-xs text-gray-500'>
-            © {new Date().getFullYear()} शेगाव नगर परिषद. सर्व हक्क राखीव.
+            © {new Date().getFullYear()} शेगांव नगर परिषद. सर्व हक्क राखीव.
             <br />
             <a href='#' className='text-[#b01d4f] hover:underline'>
               वापराच्या अटी
@@ -329,7 +319,7 @@ export function LoginForm({
       </div>
 
       {/* Right: Government Carousel */}
-      <div className='relative flex w-full items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 lg:w-[50%]'>
+      <div className='hidden lg:flex md:flex relative  w-full items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 lg:w-[50%]'>
         {/* Dynamic Background with Government Pattern */}
         {slides.map((slide, index) => (
           <div
@@ -398,7 +388,7 @@ export function LoginForm({
           </div>
 
           {/* Government Information */}
-          <div className='absolute bottom-12 left-1/2 z-20 w-full max-w-2xl -translate-x-1/2 transform px-4'>
+          {/* <div className='absolute bottom-12 left-1/2 z-20 w-full max-w-2xl -translate-x-1/2 transform px-4'>
             <div className='rounded-xl border border-white/20 bg-gradient-to-r from-white/10 to-white/5 p-6 backdrop-blur-sm'>
               <div className='relative'>
                 <div className='absolute top-1/2 -left-3 h-1 w-6 -translate-y-1/2 bg-gradient-to-r from-[#b01d4f] to-[#7a1e4f]' />
@@ -408,10 +398,10 @@ export function LoginForm({
                 <p className='text-white/90'>{slides[currentSlide].text}</p>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Emergency Contact */}
-          <div className='absolute right-8 bottom-8'>
+          {/* <div className='absolute right-8 bottom-8'>
             <div className='rounded-lg border border-white/20 bg-red-600/20 p-3 backdrop-blur-sm'>
               <div className='flex items-center gap-2'>
                 <div className='h-3 w-3 animate-pulse rounded-full bg-red-500' />
@@ -420,7 +410,7 @@ export function LoginForm({
                 </span>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

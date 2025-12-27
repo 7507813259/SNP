@@ -84,8 +84,8 @@ export default function Header() {
               height={100}
               priority
             />
-            <h1 className='text-xl font-semibold whitespace-nowrap text-red-700'>
-              शेगाव नगर परिषद
+            <h1 className='lg:text-xl md:text-xl text-2xl font-semibold whitespace-nowrap text-red-700'>
+              शेगांव नगर परिषद
             </h1>
           </div>
 
@@ -104,7 +104,7 @@ export default function Header() {
               नागरिक सेवा
             </Link>
             <Link href='#' className='text-black hover:text-red-600'>
-              शेगाव दर्शन
+              शेगांव दर्शन
             </Link>
             <Link href='#' className='text-black hover:text-red-600'>
               सूचना / प्रसिद्धी
@@ -115,7 +115,7 @@ export default function Header() {
           </nav>
 
           {/* Right Logos */}
-          <div className='flex items-center gap-3'>
+          <div className='hidden lg:flex md:flex items-center gap-3'>
             <Image
               src='/assets/mhgov.webp'
               alt='Government of Maharashtra'

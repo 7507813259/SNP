@@ -188,31 +188,31 @@ const dummyMarriageRecords: MarriageCertificateData[] = [
     brideMaritalStatus: 'अविवाहित',
     brideOccupation: 'नर्स',
     brideReligion: 'हिंदू',
-    bridePermanentAddress: 'गाव: शिंदेवाडी, ता: शेगाव, जि: बुलढाणा',
+    bridePermanentAddress: 'गाव: शिंदेवाडी, ता: शेगांव, जि: बुलढाणा',
 
     marriageDate: '2023-12-20',
-    marriagePlace: 'शेगाव, बुलढाणा',
+    marriagePlace: 'शेगांव, बुलढाणा',
     marriageType: 'हिंदू',
-    registrationOffice: 'शेगाव नगर परिषद',
+    registrationOffice: 'शेगांव नगर परिषद',
 
     witnesses: [
       {
         name: 'विजय देशपांडे',
         relation: 'वडील',
         aadhaar: '6789-0123-4567',
-        address: 'शेगाव'
+        address: 'शेगांव'
       },
       {
         name: 'मीना देशपांडे',
         relation: 'आई',
         aadhaar: '7890-1234-5678',
-        address: 'शेगाव'
+        address: 'शेगांव'
       },
       {
         name: 'राहुल पाटील',
         relation: 'मित्र',
         aadhaar: '8901-2345-6789',
-        address: 'शेगाव'
+        address: 'शेगांव'
       }
     ],
 
@@ -1829,8 +1829,8 @@ export default function MarriageCertificatePage() {
                       <SelectItem value='नागपूर नगर परिषद'>
                         नागपूर नगर परिषद
                       </SelectItem>
-                      <SelectItem value='शेगाव नगर परिषद'>
-                        शेगाव नगर परिषद
+                      <SelectItem value='शेगांव नगर परिषद'>
+                        शेगांव नगर परिषद
                       </SelectItem>
                       <SelectItem value='मुंबई महापालिका'>
                         मुंबई महापालिका

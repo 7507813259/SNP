@@ -8,7 +8,7 @@ const officials = [
     id: 1,
     name: 'श्री. रमेश पाटील',
     designation: 'महापौर',
-    subtitle: 'शेगाव नगर परिषद',
+    subtitle: 'शेगांव नगर परिषद',
     image: '/assets/mhgov.webp',
     icon: Award
   },
@@ -63,7 +63,7 @@ export default function OfficialsBanner() {
             अधिकारी वर्ग
           </h2>
           <p className='text-gray-600'>
-            शेगाव नगर परिषदेच्या वरिष्ठ अधिकाऱ्यांची माहिती
+            शेगांव नगर परिषदेच्या वरिष्ठ अधिकाऱ्यांची माहिती
           </p>
         </div>
 
@@ -135,7 +135,6 @@ export default function OfficialsBanner() {
             >
               संपर्क पृष्ठ
             </div>{' '}
-            भेट द्या
           </div>
         </div>
       </div>

@@ -13,6 +13,7 @@ import {
   CheckCircle
 } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const tabs = [
   { id: 'online-services', label: 'ऑनलाईन सेवा', icon: Globe },
@@ -26,7 +27,7 @@ const pressNotes = [
     id: 1,
     date: '२४ डिसेंबर २०२५',
     title:
-      'शेगाव नगर परिषद निवडणूक २०२५-२६ : प्रभाग क्र. २०, २१ व २६ येथे झोनल अधिकाऱ्यांसाठी मार्गदर्शन बैठक',
+      'शेगांव नगर परिषद निवडणूक २०२५-२६ : प्रभाग क्र. २०, २१ व २६ येथे झोनल अधिकाऱ्यांसाठी मार्गदर्शन बैठक',
     fileSize: '268.35 KB',
     fileType: 'PDF',
     href: '/documents/press-note-1.pdf'
@@ -52,7 +53,7 @@ const pressNotes = [
     id: 4,
     date: '२४ डिसेंबर २०२५',
     title:
-      'शेगाव नगर परिषद सार्वत्रिक निवडणूक २०२५-२६ दि. २४ डिसेंबर २०२५ रोजी नामनिर्देशन फॉर्म विक्रीचा आढावा व आचारसंहिता अंमलबजावणी',
+      'शेगांव नगर परिषद सार्वत्रिक निवडणूक २०२५-२६ दि. २४ डिसेंबर २०२५ रोजी नामनिर्देशन फॉर्म विक्रीचा आढावा व आचारसंहिता अंमलबजावणी',
     fileSize: '891.52 KB',
     fileType: 'PDF',
     href: '/documents/press-note-4.pdf'
@@ -117,7 +118,7 @@ const generalInfo = [
     id: 1,
     title: 'नगर परिषद बद्दल',
     description:
-      'शेगाव नगर परिषद ही महाराष्ट्र राज्यातील बुलढाणा जिल्ह्यातील एक महत्त्वाची स्थानिक स्वराज्य संस्था आहे.',
+      'शेगांव नगर परिषद ही महाराष्ट्र राज्यातील बुलढाणा जिल्ह्यातील एक महत्त्वाची स्थानिक स्वराज्य संस्था आहे.',
     href: '/about'
   },
   {
@@ -131,7 +132,7 @@ const generalInfo = [
     id: 3,
     title: 'नगर परिषद क्षेत्र',
     description:
-      'शेगाव नगर परिषदेच्या अधिकारक्षेत्रातील सर्व वॉर्ड आणि क्षेत्रांची माहिती.',
+      'शेगांव नगर परिषदेच्या अधिकारक्षेत्रातील सर्व वॉर्ड आणि क्षेत्रांची माहिती.',
     href: '/wards'
   }
 ];
@@ -139,7 +140,7 @@ const onlineServices = [
   {
     id: 1,
     title: 'मालमत्ता कर भरणे',
-    href: '/property-tax',
+    href: '/tax-payment',
     icon: '₹'
   },
   {
@@ -181,20 +182,20 @@ const onlineServices = [
   {
     id: 8,
     title: 'तक्रार नोंदणी',
-    href: '/grievance',
+    href: '/complaint-registeration',
     icon: '📝'
   },
   {
     id: 9,
     title: 'नवीन नळ कनेक्शन',
-    href: '/new-water-connection',
+    href: '/new-water-supply',
     icon: '🚰'
   },
 
   {
     id: 10,
     title: 'जाहिरात परवाना',
-    href: '/advertisement-license',
+    href: '/adv-license',
     icon: '📢'
   },
   {
@@ -213,10 +214,27 @@ const emergencyContacts = [
 ];
 
 export default function InfoTabs() {
-  const [activeTab, setActiveTab] = useState('press-note');
+  const [activeTab, setActiveTab] = useState('online-services');
 
   const renderContent = () => {
     switch (activeTab) {
+      case 'online-services':
+        return (
+          <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4'>
+            {onlineServices.map((service) => (
+              <Link
+                key={service.id}
+                href={service.href}
+                className='group rounded-xl border-2 border-gray-200 bg-white p-6 text-center transition-all duration-300 hover:border-[#b01d4f] hover:shadow-lg'
+              >
+                <div className='mb-4 text-4xl'>{service.icon}</div>
+                <h4 className='font-semibold text-gray-900 group-hover:text-[#b01d4f]'>
+                  {service.title}
+                </h4>
+              </Link>
+            ))}
+          </div>
+        );
       case 'press-note':
         return (
           <div className='space-y-4'>
@@ -270,24 +288,6 @@ export default function InfoTabs() {
           </div>
         );
 
-      case 'online-services':
-        return (
-          <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4'>
-            {onlineServices.map((service) => (
-              <Link
-                key={service.id}
-                href={service.href}
-                className='group rounded-xl border-2 border-gray-200 bg-white p-6 text-center transition-all duration-300 hover:border-[#b01d4f] hover:shadow-lg'
-              >
-                <div className='mb-4 text-4xl'>{service.icon}</div>
-                <h4 className='font-semibold text-gray-900 group-hover:text-[#b01d4f]'>
-                  {service.title}
-                </h4>
-              </Link>
-            ))}
-          </div>
-        );
-
       case 'emergency-contact':
         return (
           <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4'>
@@ -321,7 +321,7 @@ export default function InfoTabs() {
   };
 
   return (
-    <section className='bg-white py-8'>
+    <section className='relative py-8 overflow-hidden'>
       <div className='mx-auto max-w-7xl px-6'>
         {/* Tabs */}
         <div className='mb-8 border-b border-gray-200'>
@@ -416,6 +416,26 @@ export default function InfoTabs() {
             </div>
           </div>
         </div>
+      </div>
+      <div className='absolute top-0 -left-30 lg:-left-50 -z-1'>
+        <Image
+          src='/assets/rangoli.png'
+          alt='Description'
+          width={500}
+          height={300}
+          className='opacity-10 w-[300px] h-[300px] lg:h-[400px] lg:w-[400px]'
+          style={{ animation: 'spin 20s linear infinite' }}
+        />
+      </div>
+      <div className='absolute bottom-0 -right-30 lg:-right-50 -z-1'>
+        <Image
+          src='/assets/rangoli.png'
+          alt='Description'
+          width={500}
+          height={300}
+            className='opacity-10 w-[300px] h-[300px] lg:h-[400px] lg:w-[400px]'
+          style={{ animation: 'spin 20s linear infinite' }}
+        />
       </div>
     </section>
   );

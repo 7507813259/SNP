@@ -3,6 +3,8 @@
 // components/Footer.tsx
 import Image from 'next/image';
 import { Phone, Mail, MapPin, MessageSquare, ArrowUp } from 'lucide-react';
+import { Facebook, Instagram, Youtube, Twitter } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -11,31 +13,59 @@ export default function Footer() {
       behavior: 'smooth'
     });
   };
+  
+  const socialLinks = [
+    { icon: Facebook, href: '#', color: 'hover:bg-blue-600' },
+    { icon: Instagram, href: '#', color: 'hover:bg-pink-600' },
+    { icon: Twitter, href: '#', color: 'hover:bg-sky-500' },
+    { icon: Youtube, href: '#', color: 'hover:bg-red-600' }
+  ];
+  
   return (
-    <footer className='relative mt-10 rounded-t-[40px] bg-[#f7f7f7] pt-10'>
+    <footer className='relative mt-10 rounded-t-[40px] pt-10 overflow-hidden'>
+      {/* BACKGROUND IMAGE - ABSOLUTE AND FULL WIDTH */}
+      <div className='absolute inset-0 -z-10'>
+        <Image
+          src='/assets/calligraphy.jpg'
+          alt='Decorative background'
+          fill
+          className='object-cover w-full h-full opacity-20' // Reduced opacity to show background color
+          priority={false}
+          quality={75}
+        />
+        {/* Gradient overlay to blend image with background color */}
+        {/* <div className='absolute inset-0 bg-gradient-to-t from-amber-50 via-amber-50/90 to-amber-50/70' /> */}
+      </div>
+
       {/* TOP SECTION */}
-      <div className='mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 md:grid-cols-4'>
+      <div className='relative mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 md:grid-cols-4'>
         {/* LOGO + BADGES */}
         <div>
           <div className='mb-4 flex items-center gap-3'>
             <Image src='/logo.png' alt='SGN' width={60} height={60} />
             <h3 className='text-lg font-bold text-[#7a1e4f]'>
-              शेगाव नगर परिषद
+              शेगांव नगर परिषद
             </h3>
           </div>
 
-          <div className='mb-4 flex flex-wrap gap-2'>
-            <Image src='/assets/mhgov.webp' alt='' width={40} height={40} />
-            <Image src='/assets/mhgov.webp' alt='' width={40} height={40} />
-            <Image src='/assets/mhgov.webp' alt='' width={40} height={40} />
-            <Image src='/assets/mhgov.webp' alt='' width={40} height={40} />
-            <Image src='/assets/mhgov.webp' alt='' width={40} height={40} />
+          <div className='flex items-center gap-2'>
+            {socialLinks.map((social, index) => {
+              const Icon = social.icon;
+              return (
+                <Link
+                  key={index}
+                  href={social.href}
+                  className={`group flex h-8 w-8 items-center justify-center rounded-full bg-[#b01d4f] text-white shadow-sm transition-all duration-300 ${social.color} hover:scale-110 hover:shadow-md`}
+                  aria-label={`Social media link ${index + 1}`}
+                >
+                  <Icon
+                    size={14}
+                    className='transition-transform duration-300 group-hover:scale-110'
+                  />
+                </Link>
+              );
+            })}
           </div>
-
-          {/* <div className='w-fit rounded-xl bg-white px-4 py-3 text-sm text-gray-700 shadow'>
-            भेट संख्या (मागील ३० दिवसांत):{' '}
-            <span className='font-bold text-[#b01d4f]'>6,49,912</span>
-          </div> */}
         </div>
 
         {/* सेवा */}
@@ -46,10 +76,10 @@ export default function Footer() {
               ऑनलाईन सेवा
             </li>
             <li className='cursor-pointer text-[#b01d4f] transition-colors hover:text-[#7a1e4f]'>
-              शेगाव नगर परिषद केअर
+              शेगांव नगर परिषद केअर
             </li>
             <li className='cursor-pointer transition-colors hover:text-[#b01d4f]'>
-              शेगाव नगर परिषद अ‍ॅप
+              शेगांव नगर परिषद अ‍ॅप
             </li>
           </ul>
         </div>
@@ -93,7 +123,7 @@ export default function Footer() {
       </div>
 
       {/* CONTACT ROW */}
-      <div className='mx-auto mt-8 grid max-w-7xl grid-cols-1 gap-6 px-6 text-sm md:grid-cols-4'>
+      <div className='relative mx-auto mt-8 grid max-w-7xl grid-cols-1 gap-6 px-6 text-sm md:grid-cols-4'>
         <div></div>
         <div></div>
         <div></div>
@@ -107,8 +137,8 @@ export default function Footer() {
           <div className='flex items-start gap-2'>
             <MapPin size={16} className='mt-1 text-[#b01d4f]' />
             <span>
-              शेगाव नगर परिषद, मुख्य रस्ता, शेगाव, जिल्हा बुलढाणा, महाराष्ट्र -
-              ४४३२०१.
+              शेगांव नगर परिषद, मुख्य रस्ता, शेगांव, जिल्हा बुलढाणा, महाराष्ट्र
+              - ४४३२०१.
             </span>
           </div>
           <div className='flex items-center gap-2'>
@@ -118,31 +148,10 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* DIVIDER */}
-      <div className='mx-auto my-8 max-w-7xl border-t' />
-
       {/* BOTTOM BAR */}
-      <div className='mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 pb-6 text-xs text-gray-700 md:flex-row'>
-        <div>कॉपीराइट © २०२५ शेगाव नगर परिषद. सर्व हक्क राखीव.</div>
-
-        <div className='flex flex-col items-center gap-2'>
-          <div className='flex gap-3'>
-            <Image src='/assets/mhgov.webp' alt='' width={32} height={32} />
-            <Image src='/assets/mhgov.webp' alt='' width={32} height={32} />
-            <Image src='/assets/mhgov.webp' alt='' width={32} height={32} />
-            <Image src='/assets/mhgov.webp' alt='' width={32} height={32} />
-            <Image src='/assets/mhgov.webp' alt='' width={32} height={32} />
-          </div>
-          <div>२९/०३/२०२५ रोजी अद्ययावत केले</div>
-        </div>
-
-        {/* <div>
-          डिझाईन व विकसित – स्टॅक डिजिटल मीडिया सोल्युशन्स प्रा. लि. द्वारे
-        </div> */}
+      <div className='pb-5 relative mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-xs text-gray-700 md:flex-row'>
+        <div>कॉपीराइट © २०२५ शेगांव नगर परिषद. सर्व हक्क राखीव.</div>
       </div>
-
-      {/* CITY ILLUSTRATION STRIP */}
-      <div className="h-24 bg-[url('/footer-city.png')] bg-bottom bg-repeat-x opacity-30" />
 
       {/* SCROLL TO TOP */}
       <button
@@ -154,9 +163,9 @@ export default function Footer() {
       </button>
 
       {/* FLOATING LOGO */}
-      <button className='fixed right-20 bottom-6 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow'>
+      {/* <button className='fixed right-20 bottom-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow'>
         <Image src='/assets/mhgov.webp' alt='SGN' width={30} height={30} />
-      </button>
+      </button> */}
     </footer>
   );
 }

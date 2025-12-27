@@ -168,7 +168,7 @@ const dummyDeathRecords: DeathCertificateData[] = [
     mobile: '7654321098',
     email: 'ajay.patil@example.com',
     aadhaar: '3456-7890-1234',
-    address: 'गाव: शिंदेवाडी, ता: शेगाव, जि: बुलढाणा',
+    address: 'गाव: शिंदेवाडी, ता: शेगांव, जि: बुलढाणा',
     idProofType: 'Voter ID',
     
     deceasedName: 'संजय पाटील',
@@ -188,7 +188,7 @@ const dummyDeathRecords: DeathCertificateData[] = [
     motherName: 'सुशीला पाटील',
     spouseName: 'प्रिया पाटील',
     nationality: 'भारतीय',
-    permanentAddress: 'गाव: शिंदेवाडी, ता: शेगाव, जि: बुलढाणा',
+    permanentAddress: 'गाव: शिंदेवाडी, ता: शेगांव, जि: बुलढाणा',
     
     certificateType: 'नवीन',
     numberOfCopies: 1,

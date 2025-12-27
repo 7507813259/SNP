@@ -188,7 +188,7 @@ const dummyResidenceRecords: ResidenceCertificateData[] = [
     caste: 'OBC',
 
     currentAddress: 'फ्लॅट नंबर 304, सह्याद्री सोसायटी, वरदानगर, नागपूर',
-    permanentAddress: 'गाव: शिंदेवाडी, ता: शेगाव, जि: बुलढाणा',
+    permanentAddress: 'गाव: शिंदेवाडी, ता: शेगांव, जि: बुलढाणा',
     yearsOfResidence: 5,
     typeOfResidence: 'भाड्याचे',
     houseNo: '304',

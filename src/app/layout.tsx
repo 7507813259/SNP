@@ -17,8 +17,8 @@ const META_THEME_COLORS = {
 };
 
 export const metadata: Metadata = {
-  title: 'शेगाव नगर परिषद - अधिकृत वेबसाइट',
-  description: 'शेगाव नगर परिषदेची अधिकृत वेबसाइट'
+  title: 'शेगांव नगर परिषद - अधिकृत वेबसाइट',
+  description: 'शेगांव नगर परिषदेची अधिकृत वेबसाइट'
 };
 
 export const viewport: Viewport = {

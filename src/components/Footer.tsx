@@ -36,14 +36,14 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
               <Shield />
-              शेगाव नगर परिषद
+              शेगांव नगर परिषद
             </h3>
             <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <MapPin className="mt-1 text-blue-300" size={18} />
                 <p className="text-gray-300">
                   नगर परिषद कार्यालय, मुख्य रस्ता,<br />
-                  शेगाव, जिल्हा बुलढाणा,<br />
+                  शेगांव, जिल्हा बुलढाणा,<br />
                   महाराष्ट्र - ४४३२०१
                 </p>
               </div>
@@ -120,7 +120,7 @@ const Footer = () => {
             </div>
             <div className="text-center md:text-right">
               <p className="text-gray-400">
-                © {new Date().getFullYear()} शेगाव नगर परिषद. सर्व हक्क राखीव.
+                © {new Date().getFullYear()} शेगांव नगर परिषद. सर्व हक्क राखीव.
               </p>
               <p className="text-gray-500 text-sm mt-1">
                 महाराष्ट्र शासनाच्या अधिकृत वेबसाइटशी संलग्न

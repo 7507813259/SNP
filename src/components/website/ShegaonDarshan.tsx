@@ -54,7 +54,25 @@ const darshanPlaces = [
     category: 'उद्यान',
     rating: '४.५',
     href: '/darshan/anand-sagar'
-  }
+  },
+  {
+    id: 6,
+    name: 'आनंद सागर',
+    description: 'कृत्रिम तलाव व उद्यान संकुल',
+    image: '/assets/collage1.jpg',
+    category: 'उद्यान',
+    rating: '४.५',
+    href: '/darshan/anand-sagar'
+  },
+  {
+    id: 7,
+   name: 'गजानन महाराज मंदिर',
+    description: 'प्रसिद्ध आध्यात्मिक केंद्र',
+    image: '/assets/colage2.jpg',
+    category: 'मंदिर',
+    rating: '४.८',
+    href: '/darshan/gajanan-maharaj-temple'
+  },
 ];
 
 const infoCards = [
@@ -104,9 +122,9 @@ export default function ShegaonDarshan() {
               पर्यटन व दर्शन
             </span>
           </div>
-          <h2 className='mb-4 text-4xl font-bold text-gray-900'>शेगाव दर्शन</h2>
+          <h2 className='mb-4 text-4xl font-bold text-gray-900'>शेगांव दर्शन</h2>
           <p className='mx-auto max-w-2xl text-lg text-gray-600'>
-            शेगाव शहराची ऐतिहासिक, सांस्कृतिक आणि प्राकृतिक वैभवाची सफर
+            शेगांव शहराची ऐतिहासिक, सांस्कृतिक आणि प्राकृतिक वैभवाची सफर
           </p>
         </div>
 

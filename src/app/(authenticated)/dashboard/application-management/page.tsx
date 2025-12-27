@@ -155,7 +155,7 @@ const getDummyApplications = () => [
     priority: 'high',
     submittedDate: '२०२४-०३-१५',
     assignedTo: 'स्मिता जोशी',
-    address: '१२३, मुख्य रस्ता, शेगाव'
+    address: '१२३, मुख्य रस्ता, शेगांव'
   },
   {
     applicationId: 'APP-2024-001235',
@@ -168,7 +168,7 @@ const getDummyApplications = () => [
     priority: 'medium',
     submittedDate: '२०२४-०३-१४',
     assignedTo: 'अनिल कुमार',
-    address: '४५६, नवीन नगर, शेगाव'
+    address: '४५६, नवीन नगर, शेगांव'
   },
   {
     applicationId: 'APP-2024-001236',
@@ -181,7 +181,7 @@ const getDummyApplications = () => [
     priority: 'high',
     submittedDate: '२०२४-०३-१३',
     assignedTo: 'प्रिया शर्मा',
-    address: '७८९, जुन नगर, शेगाव'
+    address: '७८९, जुन नगर, शेगांव'
   },
   {
     applicationId: 'APP-2024-001237',
@@ -194,7 +194,7 @@ const getDummyApplications = () => [
     priority: 'low',
     submittedDate: '२०२४-०३-१२',
     assignedTo: 'राहुल वर्मा',
-    address: '१०१, वसई रोड, शेगाव'
+    address: '१०१, वसई रोड, शेगांव'
   },
   {
     applicationId: 'APP-2024-001238',
@@ -207,7 +207,7 @@ const getDummyApplications = () => [
     priority: 'medium',
     submittedDate: '२०२४-०३-११',
     assignedTo: 'संजय गुप्ता',
-    address: '२०२, अकोला रोड, शेगाव'
+    address: '२०२, अकोला रोड, शेगांव'
   }
 ];
 
