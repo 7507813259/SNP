@@ -6,36 +6,36 @@ import { User, Award, Briefcase } from 'lucide-react';
 const officials = [
   {
     id: 1,
-    name: 'श्री. रमेश पाटील',
-    designation: 'महापौर',
+    name: 'सौ. जयश्री काकड / बोरुडे',
+    designation: 'मुख्याधिकारी',
     subtitle: 'शेगांव नगर परिषद',
     image: '/assets/mhgov.webp',
     icon: Award
   },
   {
     id: 2,
-    name: 'श्री. विजय कुमार',
-    designation: 'मुख्य कार्यकारी अधिकारी',
-    subtitle: '(सामान्य)',
+    name: 'श्री. राजवर्धन पाटील',
+    designation: 'उपमुख्याधिकारी',
+    subtitle: 'शेगांव नगर परिषद',
     image: '/assets/mhgov.webp',
     icon: Briefcase
   },
   {
     id: 3,
-    name: 'श्री. संजय देशमुख',
-    designation: 'अतिरिक्त कार्यकारी अधिकारी',
-    subtitle: '(योजना)',
-    image: '/assets/mhgov.webp',
-    icon: User
-  },
-  {
-    id: 4,
-    name: 'श्री. प्रवीण गायकवाड',
-    designation: 'अतिरिक्त कार्यकारी अधिकारी',
-    subtitle: '(विशेष)',
+    name: 'श्री. प्रकाश एकनाथ शेगोकार',
+    designation: 'नगराध्यक्ष',
+    subtitle: 'शेगांव नगर परिषद',
     image: '/assets/mhgov.webp',
     icon: User
   }
+  // {
+  //   id: 4,
+  //   name: 'श्री. प्रवीण गायकवाड',
+  //   designation: 'अतिरिक्त कार्यकारी अधिकारी',
+  //   subtitle: '(विशेष)',
+  //   image: '/assets/mhgov.webp',
+  //   icon: User
+  // }
 ];
 
 export default function OfficialsBanner() {
@@ -68,7 +68,7 @@ export default function OfficialsBanner() {
         </div>
 
         {/* Officials Grid */}
-        <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4'>
+        <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
           {officials.map((official) => {
             const Icon = official.icon;
             return (
@@ -114,7 +114,7 @@ export default function OfficialsBanner() {
                     {official.designation}
                   </p>
                   {official.subtitle && (
-                    <p className='text-xs text-gray-600'>{official.subtitle}</p>
+                    <p className='text-xs text-gray-600 mt-1'>{official.subtitle}</p>
                   )}
                 </div>
 

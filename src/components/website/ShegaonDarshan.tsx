@@ -73,6 +73,24 @@ const darshanPlaces = [
     rating: '४.८',
     href: '/darshan/gajanan-maharaj-temple'
   },
+  {
+    id: 8,
+   name: 'कृष्णाजीं चा मळा',
+    description: 'आध्यात्मिक केंद्र',
+    image: '/assets/kjm.webp',
+    category: 'मंदिर',
+    rating: '४.८',
+    href: '/darshan/gajanan-maharaj-temple'
+  },
+  {
+    id: 9,
+   name: 'श्री क्षेत्र सिद्धपीठ',
+    description: 'आध्यात्मिक केंद्र',
+    image: '/assets/sdp.jpg',
+    category: 'मंदिर',
+    rating: '४.८',
+    href: '/darshan/gajanan-maharaj-temple'
+  },
 ];
 
 const infoCards = [
