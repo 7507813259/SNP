@@ -1363,7 +1363,7 @@ export default function BirthCertificatePage() {
 
                 <div>
                   <Label htmlFor='timeOfBirth' className='text-[#7a1e4f]'>
-                    जन्म वेळ (Optional)
+                    जन्म वेळ 
                   </Label>
                   <Input
                     id='timeOfBirth'
@@ -1506,7 +1506,7 @@ export default function BirthCertificatePage() {
 
                 <div>
                   <Label htmlFor='guardianName' className='text-[#7a1e4f]'>
-                    पालकाचे नाव (जर लागू असेल तर)
+                    पालकाचे नाव
                   </Label>
                   <Input
                     id='guardianName'
@@ -1519,7 +1519,7 @@ export default function BirthCertificatePage() {
 
                 <div>
                   <Label htmlFor='parentAadhaar' className='text-[#7a1e4f]'>
-                    पालक आधार क्रमांक (Optional)
+                    पालक आधार क्रमांक
                   </Label>
                   <Input
                     id='parentAadhaar'
