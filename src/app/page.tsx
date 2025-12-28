@@ -5,6 +5,7 @@ import EssentialServices from '@/components/website/EssentialServices';
 import Footer from '@/components/website/footer';
 import GovernmentLinksSlider from '@/components/website/govtLinks';
 import InfoTabs from '@/components/website/InfoTabs';
+import LeadersStrip from '@/components/website/Leadership';
 import NewsUpdates from '@/components/website/NewsUpdates';
 import OfficialsBanner from '@/components/website/OfficialsBanner';
 import ShegaonDarshan from '@/components/website/ShegaonDarshan';
@@ -18,6 +19,7 @@ export default function HomePage() {
       <Header />
       <HeroSlider />
       <AnnouncementMarquee />
+      <LeadersStrip/>
       <InfoTabs />
       <ShegaonDarshan />
       <CitizenInteraction />

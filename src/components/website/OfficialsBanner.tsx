@@ -6,10 +6,10 @@ import { User, Award, Briefcase } from 'lucide-react';
 const officials = [
   {
     id: 1,
-    name: 'सौ. जयश्री काकड / बोरुडे',
+    name: 'सौ. जयश्री काटकर / बोराडे',
     designation: 'मुख्याधिकारी',
     subtitle: 'शेगांव नगर परिषद',
-    image: '/assets/mhgov.webp',
+    image: '',
     icon: Award
   },
   {
@@ -17,7 +17,7 @@ const officials = [
     name: 'श्री. राजवर्धन पाटील',
     designation: 'उपमुख्याधिकारी',
     subtitle: 'शेगांव नगर परिषद',
-    image: '/assets/mhgov.webp',
+    image: '',
     icon: Briefcase
   },
   {
@@ -25,7 +25,7 @@ const officials = [
     name: 'श्री. प्रकाश एकनाथ शेगोकार',
     designation: 'नगराध्यक्ष',
     subtitle: 'शेगांव नगर परिषद',
-    image: '/assets/mhgov.webp',
+    image: '',
     icon: User
   }
   // {

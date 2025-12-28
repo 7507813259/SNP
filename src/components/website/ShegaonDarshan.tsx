@@ -91,6 +91,24 @@ const darshanPlaces = [
     rating: '४.८',
     href: '/darshan/gajanan-maharaj-temple'
   },
+  {
+    id: 10,
+   name: 'श्री क्षेत्र सिद्धपीठ',
+    description: 'आध्यात्मिक केंद्र',
+    image: '/assets/sv1.jpg',
+    category: 'मंदिर',
+    rating: '४.८',
+    href: '/darshan/gajanan-maharaj-temple'
+  },
+  {
+    id: 11,
+   name: 'छत्रपती शिवाजी महाराज चौक',
+    description: 'स्मारक',
+    image: '/assets/sv2.jpg',
+    category: 'चौक',
+    rating: '४.८',
+    href: '/darshan/gajanan-maharaj-temple'
+  },
 ];
 
 const infoCards = [
